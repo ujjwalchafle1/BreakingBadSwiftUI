@@ -7,28 +7,17 @@
 
 import SwiftUI
 
-struct ListView: View, CharacterServiceDelegate {
+struct ListView: View {
   
   @Environment(\.colorScheme) var colorScheme
   
+  @ObservedObject var viewModel: CharacterViewModel
+  
   @State private var searchText: String = ""
   
-  
-  func didReciveResponse(response: Character) {
-    charArr = response
+  init(vm: CharacterViewModel = CharacterViewModel()) {
+    viewModel = vm
   }
-  
-  func didReciveError(error: String) {
-    // print(error)
-    DispatchQueue.main.async {
-      self.showAlert.toggle()
-      self.isError = (true, error)
-    }
-  }
-  
-  @State var charArr: Character = []
-  @State var isError = (false,"")
-  @State var showAlert = false
   
   var body: some View {
     
@@ -36,15 +25,15 @@ struct ListView: View, CharacterServiceDelegate {
       
       VStack
       {
-        if !showAlert {
-          if !charArr.isEmpty {
+        if !viewModel.showAlert {
+          if !viewModel.charArr.isEmpty {
             SearchBar(text: $searchText)
           }
         } else {
           Button(action: {
-            self.showAlert.toggle()
-              self.isError = (false,"")
-              self.getData()
+            self.viewModel.showAlert.toggle()
+            self.viewModel.isError = (false,"")
+            self.viewModel.getCharacterData()
           }, label: {
             Text("Tap to Retry!")
               .foregroundColor(.orange)
@@ -53,7 +42,7 @@ struct ListView: View, CharacterServiceDelegate {
         }
         
         List {
-          ForEach(charArr.filter({ searchText.isEmpty ? true : $0.name.contains(searchText)}), id: \.name) { character in
+          ForEach(viewModel.charArr.filter({ searchText.isEmpty ? true : $0.name.contains(searchText)}), id: \.name) { character in
             NavigationLink(
               destination: DetailsView(character: character),
               label: {
@@ -65,33 +54,19 @@ struct ListView: View, CharacterServiceDelegate {
         }
       }
       
-      .alert(isPresented: $isError.0) {
+      .alert(isPresented: $viewModel.isError.0) {
         Alert(
           title: Text("Error"),
-          message: Text(isError.1)
+          message: Text(viewModel.isError.1)
         )
       }
       
       .onAppear{
         UITableViewCell.appearance().selectedBackgroundView = UIView()
-        getData()
       }
       
     }
     .accentColor(colorScheme == .dark ? .white : .black)
   }
-  
-  func getData()
-  {
-    var service = CharacterService()
-    service.delegate = self
-    service.getCharacterData()
-  }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ListView()
-  }
-}

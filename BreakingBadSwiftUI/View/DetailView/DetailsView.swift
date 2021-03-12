@@ -17,7 +17,7 @@ struct DetailsView: View {
     VStack {
       CharacterImageView(imageUrl: character.img)
       Spacer()
-
+      
       Text(character.name)
         .fontWeight(.bold)
         .font(.system(size: 30))
@@ -61,11 +61,5 @@ struct DetailsView: View {
         }
       }
     }
-  }
-}
-
-struct DetailsView_Previews: PreviewProvider {
-  static var previews: some View {
-    DetailsView()
   }
 }
