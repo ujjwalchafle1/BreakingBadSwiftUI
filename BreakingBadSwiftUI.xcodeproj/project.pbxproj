@@ -123,10 +123,10 @@
 		0C5974F425FC07DF004F1BA8 /* BreakingBadSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				0C59755125FC0A32004F1BA8 /* Utility */,
 				0C59752325FC0825004F1BA8 /* View */,
 				0C59753125FC083D004F1BA8 /* Model */,
 				0C59753225FC0843004F1BA8 /* Network */,
+				0C59755125FC0A32004F1BA8 /* Utility */,
 				0C5974F525FC07DF004F1BA8 /* BreakingBadSwiftUIApp.swift */,
 				0C5974F725FC07DF004F1BA8 /* ContentView.swift */,
 				0C5974F925FC07E0004F1BA8 /* Assets.xcassets */,
