@@ -1,6 +1,6 @@
 //
 //  SearchBar.swift
-//  Planets
+//  BreakingBadSwiftUI
 //
 //  Created by Ujjwal on 16/02/2021.
 //
