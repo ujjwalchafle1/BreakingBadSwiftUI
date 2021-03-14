@@ -29,7 +29,6 @@ struct CharacterCell: View {
             .lineLimit(3)
           
           Text(charNickName.uppercased())
-            .font(.caption)
             .foregroundColor(.secondary)
           
         }

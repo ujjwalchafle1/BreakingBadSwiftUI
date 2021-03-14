@@ -125,9 +125,9 @@
 		0C5974F425FC07DF004F1BA8 /* BreakingBadSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				0C59756225FC10CF004F1BA8 /* ViewModel */,
 				0C59752325FC0825004F1BA8 /* View */,
 				0C59753125FC083D004F1BA8 /* Model */,
+				0C59756225FC10CF004F1BA8 /* ViewModel */,
 				0C59753225FC0843004F1BA8 /* Network */,
 				0C59755125FC0A32004F1BA8 /* Utility */,
 				0C5974F525FC07DF004F1BA8 /* BreakingBadSwiftUIApp.swift */,
@@ -186,9 +186,9 @@
 		0C59753225FC0843004F1BA8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				0C59753C25FC0864004F1BA8 /* Helper */,
 				0C59753A25FC0864004F1BA8 /* Manager */,
 				0C59753825FC0863004F1BA8 /* Services */,
+				0C59753C25FC0864004F1BA8 /* Helper */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -581,7 +581,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uc.BreakingBadSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -602,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uc.BreakingBadSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
