@@ -8,7 +8,6 @@
 * [Setup](#setup)
 * [Approach](#approach)
 * [Code Structure And Design Pattern](#code-structure-and-design-pattern)
-* [Unit Testing](#unit-testing)
 * [Future Features And Improvements](#future-features-and-improvements)
 
 ## Introduction:
@@ -88,15 +87,8 @@ You will need to configure your development team in the app target's **"Signing 
 ### Other:
 1.  **CharacterServiceDelegate** - protocol to notify when the data is available. (Notify Success or Failure)
 
-## Unit Testing: 
-Apples **XCTest framework** is used to write the unit tests and UI tests for the application.
-Following image illustrates the **test coverage** of the project.
-
-<img src="READMEAssets/CSTestCoverage.png" width="800" height="400">
-
-
 ## Future Features And Improvements:
-1.  Write more Unit Tests and UI test.
+1.  Write Unit Tests and UI test.
 2.  Add more animations.
 
 
