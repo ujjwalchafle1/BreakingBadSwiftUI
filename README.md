@@ -58,7 +58,7 @@ You will need to configure your development team in the app target's **"Signing 
 
 ## Code Structure And Design Pattern:
 
-<img src="READMEAssets/ProjectStructure.png" width="230" height="400">
+<img src="READMEAssets/ProjectStructure.png" width="230" height="600">
 
 ### View:
 1.  **ContentView** – root view for the app.
