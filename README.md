@@ -17,10 +17,12 @@ iOS application to fetch and display a list of Breaking Bad series characters fr
 ## Application Screens:
 <p float="left">
 <img src="READMEAssets/ListLight.png" width="250" height="450">
-<img src="READMEAssets/ListDark.png" width="250" height="450">
 <img src="READMEAssets/DetailsLight.png" width="250" height="450">
-<img src="READMEAssets/DetailsDark.png" width="250" height="450">
+</p>
 
+<p float="left">
+<img src="READMEAssets/ListDark.png" width="250" height="450">
+<img src="READMEAssets/DetailsDark.png" width="250" height="450">
 </p>
 
 ## Features:
